@@ -20,8 +20,9 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
   - [x] View the result of clustering with huge number of images
   - [x] Browse the hierarchical directories
   - [x] Show bunch of images with grid gallery view and paginization
-- [ ] Support to run and show the progress of the clustering with buttons on the web 
-- [ ] Show the featuremaps for each image
+- Others
+  - [ ] Support to run and show the progress of the clustering with buttons on the web 
+  - [ ] Show the featuremaps for each image
 
 ## Getting Started
 
@@ -50,8 +51,9 @@ Download image data from what you want. You can prepare any bunch of unlabeled i
     |   └── img_999.jpg
     └── clutering-results
         └── my-images-001-clustering
-		        ├── 20201225-160650-d999-c100
-		        ├── 20201225-170423-d999-c100
+            ├── 20201226-110202-d999-c50
+            ├── 20201225-160650-d999-c100
+            └── 20201225-170423-d999-c100
 ```
 
 ### 2. Install Requirements
