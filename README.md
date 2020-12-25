@@ -4,7 +4,7 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
 
 ## DEMO
 
-![browsing demo](https://user-images.githubusercontent.com/37643248/103070144-3b155780-4604-11eb-9635-dd1cf8627031.gif)
+![clustering-viewer-demo-coco-dataset-3-1](https://user-images.githubusercontent.com/37643248/103138470-57a1b480-4716-11eb-9ad5-c8ef46ec7db2.gif)
 
 ## Features
 
