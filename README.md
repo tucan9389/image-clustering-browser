@@ -43,7 +43,7 @@ Download image data from what you want. You can prepare any bunch of unlabeled i
 |   ├── browser-server
 |   ├── clustering
 |   └── README.md
-└── data	  									    # you shouldn't need to locate on the same level with the repo
+└── data                          # you shouldn't need to locate on the same level with the repo
     ├── my-images-001
     |   ├── img_001.jpg
     |   ├── img_002.jpg
