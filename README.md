@@ -73,6 +73,12 @@ $ pip install numpy Flask Flask-Cors
 ```
 
 4. [Install yarn](https://classic.yarnpkg.com/en/docs/install/) for react app
+5. yarn install on browser-react directory
+
+```shell script
+$ cd browser-react
+$ yarn install
+```
 
 ### 3. Get featuremaps
 
