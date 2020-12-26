@@ -93,7 +93,47 @@ $ python clustering-to-txt.py \
     --clustering_output_path "../data/clutering-results/my-images-001-clustering"
 ```
 
+
 ### 5. Run Browser API and Client Server
+
+
+
+<details>
+<summary>The clustering makes the directory structure. If you make cluster by yourself, you have to conform the structure.</summary>
+  
+```
+../data/clutering-results
+└── my-images-001-clustering
+    ├── img_names.txt
+    ├── 20201225-160650-d999-c5
+    |   ├── 000
+    |   |   └── img_names.txt
+    |   ├── 001
+    |   |   └── img_names.txt
+    |   ├── 002
+    |   |   └── img_names.txt
+    |   ├── 004
+    |   |   └── img_names.txt
+    |   └── etc
+    |       └── img_names.txt
+    └── 20201225-170423-d999-c3
+        ├── 000
+        |   └── img_names.txt
+        ├── 001
+        |   └── img_names.txt
+        |   └── 20201226-034123-d103-c3
+        |       ├── 000
+        |       |   └── img_names.txt
+        |       ├── 001
+        |       |   └── img_names.txt
+        |       └── 002
+        |           └── img_names.txt
+        └── 002
+            └── img_names.txt
+```
+</details>
+
+And then, run the server and client app.
 
 ```shell script
 # run api server
