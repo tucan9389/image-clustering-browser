@@ -36,6 +36,7 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
 
 ```shell script
 $ git clone https://github.com/tucan9389/image-clustering-browser
+cd image-clustering-browser
 ```
 
 ### 1. Prepare Data
@@ -91,7 +92,7 @@ $
 ### 4. Run Clustering
 
 ```shell script
-$ cd ~/image-clustering-browser/clustering
+$ cd clustering
 $ python clustering-to-txt.py \
     --number_of_cluster 100 \
     --img_dir_path "../data/my-images-001" \
@@ -143,13 +144,13 @@ And then, run the server and client app.
 
 ```shell script
 # run api server
-$ cd ~/image-clustering-browser/browser-server
+$ cd browser-server
 $ python app.py \
     --img_dir_path "../data/my-images-001" \
     --clustering_output_path "../data/clutering-results/my-images-001-clustering"
 
 # and then run client server
-$ cd ~/image-clustering-browser/browser-react
+$ cd ../browser-react
 $ yarn start
 ```
 
