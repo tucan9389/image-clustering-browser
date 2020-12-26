@@ -28,7 +28,7 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
   
 ## Diagram
 
-<img src="https://user-images.githubusercontent.com/37643248/103156055-4c1ebe00-47e8-11eb-875e-4dcd0e70ad1c.png" width=600px>
+<img src="https://user-images.githubusercontent.com/37643248/103156156-407fc700-47e9-11eb-88be-4ac6b08e298c.png" width=600px>
 
 ## Getting Started
 
