@@ -149,12 +149,9 @@ $ yarn start
 
 And now you can browse the clustered images at [`http://localhost:3000/browser/`](`http://localhost:3000/browser/`).
 
-## Used Functions
+## Used Libraries
 
-- faiss
-- k-means clustering
-- ReXNetV1
-- React
-- Flask
-
-## Reference
+- [faiss](https://github.com/facebookresearch/faiss)
+- [React](https://reactjs.org/)
+- [Flask](https://palletsprojects.com/p/flask/)
+- [ReXNetV1](https://github.com/clovaai/rexnet)
