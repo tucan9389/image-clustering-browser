@@ -25,6 +25,10 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
 - Others
   - [ ] Support to run and show the progress of the clustering with buttons on the web
   - [ ] Show the featuremaps for each image
+  
+## Diagram
+
+![image](https://user-images.githubusercontent.com/37643248/103156055-4c1ebe00-47e8-11eb-875e-4dcd0e70ad1c.png)
 
 ## Getting Started
 
