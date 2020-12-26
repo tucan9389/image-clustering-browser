@@ -1,4 +1,4 @@
-# Image Clustering and Browsing
+# Image Clustering Browser
 
 You can cluster bunch of images with [faiss](https://github.com/facebookresearch/faiss) similarity and [k-means](https://en.wikipedia.org/wiki/K-means_clustering) clustering algorithm and browse the result on web with react client and flask server.
 
@@ -9,10 +9,12 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
 ## Features
 
 - Cluster (python 3.6+, faiss, k-means)
+
   - [x] Without copying images, cluster million level images and write at txt files
   - [ ] Make featuremaps with images
 
 - Server (python 3.6+, flask)
+
   - [x] Serve hierarchical directories browsing api
   - [x] Serve images serving api
 
@@ -21,7 +23,7 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
   - [x] Browse the hierarchical directories
   - [x] Show bunch of images with grid gallery view and paginization
 - Others
-  - [ ] Support to run and show the progress of the clustering with buttons on the web 
+  - [ ] Support to run and show the progress of the clustering with buttons on the web
   - [ ] Show the featuremaps for each image
 
 ## Getting Started
@@ -29,7 +31,7 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
 ### 0. Clone the project
 
 ```shell script
-$ git clone https://github.com/tucan9389/image-clustering-and-browsing
+$ git clone https://github.com/tucan9389/image-clustering-browser
 ```
 
 ### 1. Prepare Data
@@ -38,7 +40,7 @@ Download image data from what you want. You can prepare any bunch of unlabeled i
 
 ```
 {path-to-your-working-directory}
-├── image-clustering-and-browsing # clone from this repo
+├── image-clustering-browser # clone from this repo
 |   ├── browser-react
 |   ├── browser-server
 |   ├── clustering
@@ -73,13 +75,13 @@ $ pip install numpy Flask Flask-Cors
 > Preparing...
 
 ```shell script
-$ 
+$
 ```
 
 ### 4. Run Clustering
 
 ```shell script
-$ cd ~/image-clustering-and-browsing/clustering
+$ cd ~/image-clustering-browser/clustering
 $ python clustering-to-txt.py \
     --number_of_cluster 100 \
     --img_dir_path "../data/my-images-001" \
@@ -91,13 +93,13 @@ $ python clustering-to-txt.py \
 
 ```shell script
 # run api server
-$ cd ~/image-clustering-and-browsing/browser-server
-$ python app.py \ 
+$ cd ~/image-clustering-browser/browser-server
+$ python app.py \
     --img_dir_path "../data/my-images-001" \
     --clustering_output_path "../data/clutering-results/my-images-001-clustering"
 
 # and then run client server
-$ cd ~/image-clustering-and-browsing/browser-react
+$ cd ~/image-clustering-browser/browser-react
 $ yarn start
 ```
 
@@ -112,4 +114,3 @@ And now you can browse the clustered images at [`http://localhost:3000/browser/`
 - Flask
 
 ## Reference
-
