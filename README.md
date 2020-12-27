@@ -8,11 +8,6 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
 
 ## Features
 
-- Cluster (python 3.6+, faiss, k-means)
-
-  - [x] Without copying images, cluster million level images and write at txt files
-  - [ ] Make featuremaps with images
-
 - Server (python 3.6+, flask)
 
   - [x] Serve hierarchical directories browsing api
@@ -23,6 +18,8 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
   - [x] Browse the hierarchical directories
   - [x] Show bunch of images with grid gallery view and paginization
 - Others
+  - [x] Without copying images, cluster million level images and write at txt files (faiss)
+  - [ ] Make featuremaps with images
   - [ ] Support to run and show the progress of the clustering with buttons on the web
   - [ ] Show the featuremaps for each image
   
@@ -39,34 +36,9 @@ $ git clone https://github.com/tucan9389/image-clustering-browser
 cd image-clustering-browser
 ```
 
-### 1. Prepare Data
-
-Download image data from what you want. You can prepare any bunch of unlabeled images like [ImageNet dataset](http://www.image-net.org/), [COCO dataset](https://cocodataset.org/#home), or your personal images in the mobile phone's photo album even though.
-
-```
-{path-to-your-working-directory}
-├── image-clustering-browser # clone from this repo
-|   ├── browser-react
-|   ├── browser-server
-|   ├── clustering
-|   └── README.md
-└── data                          # you shouldn't need to locate on the same level with the repo
-    ├── my-images-001
-    |   ├── img_001.jpg
-    |   ├── img_002.jpg
-    |   ├── ...
-    |   └── img_999.jpg
-    └── clutering-results
-        └── my-images-001-clustering
-            ├── 20201226-110202-d999-c50
-            ├── 20201225-160650-d999-c100
-            └── 20201225-170423-d999-c100
-```
-
-### 2. Install Requirements
+### 1. Install Requirements
 
 1. [Install anaconda](https://docs.anaconda.com/anaconda/install/) and pathon 3.6+
-2. [Install faiss](https://github.com/facebookresearch/faiss/blob/master/INSTALL.md) for clustering
 3. Install python libraries for clustering batch and api server
 
 ```shell script
@@ -81,33 +53,18 @@ $ cd browser-react
 $ yarn install
 ```
 
-### 3. Get featuremaps
+### 2. Prepare Images and Clustering Result
 
-> Preparing...
+You can select one of the options:
 
-```shell script
-$
-```
+1. Download sample data from image data and clustering data
+2. Make your own clustering with [CLUSTERING_GUIDE.md](CLUSTERING_GUIDE.md)
 
-### 4. Run Clustering
-
-```shell script
-$ cd clustering
-$ python clustering-to-txt.py \
-    --number_of_cluster 100 \
-    --img_dir_path "../data/my-images-001" \
-    --featuremap_dir_path "../data/my-images-001-rexnetv1_2.0x-inferredfeatures" \
-    --clustering_output_path "../data/clutering-results/my-images-001-clustering"
-```
-
-
-### 5. Run Browser API and Client Server
-
-
+### 3. Run Browser API and Client Server
 
 <details>
 <summary>The clustering makes the directory structure. If you make cluster by yourself, you have to conform the structure.</summary>
-  
+
 ```
 ../data/clutering-results
 └── my-images-001-clustering
@@ -158,7 +115,5 @@ And now you can browse the clustered images at [`http://localhost:3000/browser/`
 
 ## Used Libraries
 
-- [faiss](https://github.com/facebookresearch/faiss)
 - [React](https://reactjs.org/)
 - [Flask](https://palletsprojects.com/p/flask/)
-- [ReXNetV1](https://github.com/clovaai/rexnet)
