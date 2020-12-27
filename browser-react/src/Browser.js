@@ -22,23 +22,27 @@ class Browser extends Component {
     }
   }
 
+  getPath() {
+    return window.location.pathname == "/browser"
+      ? "/browser/"
+      : window.location.pathname;
+  }
+
   update() {
     var queryDict = {};
+    var pathname = this.getPath();
     window.location.search
       .substr(1)
       .split("&")
       .forEach(function (item) {
         queryDict[item.split("=")[0]] = item.split("=")[1];
       });
-    console.log(queryDict);
-    this.updatePath(
-      window.location.pathname,
-      queryDict.page ? parseInt(queryDict.page) : 1
-    );
+    // console.log(queryDict);
+    this.updatePath(pathname, queryDict.page ? parseInt(queryDict.page) : 1);
   }
 
   updatePath(path, page) {
-    console.log(page);
+    // console.log(page);
     var target_path = path;
     if (!target_path) {
       target_path = "/";
@@ -47,7 +51,7 @@ class Browser extends Component {
 
     const request_path =
       "http://0.0.0.0:8001" + "/browse" + target_path + "?page=" + page;
-    console.log(request_path);
+    // console.log(request_path);
 
     axios.get(request_path).then((response) => {
       // handle success
@@ -59,7 +63,7 @@ class Browser extends Component {
       const totalPages = response.data.total_pages;
       const totalImages = response.data.total_images;
       // console.log(clu_names);
-      console.log(photos);
+      // console.log(photos);
       this.setState({
         clu_names,
         target_path,
@@ -73,9 +77,9 @@ class Browser extends Component {
 
   handlePaginationChange = (activePage) => {
     // history.push("/path?page" + activePage);
-    const onlyPath = window.location.pathname.split("?")[0];
+    const onlyPath = this.getPath().split("?")[0];
     window.location.href = onlyPath + "?page=" + activePage;
-    console.log("activePage:" + activePage);
+    // console.log("activePage:" + activePage);
     this.setState({ page: activePage });
     // this.props.handlePaginationChange(activePage);
   };

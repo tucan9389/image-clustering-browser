@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Browser from "./Browser.js";
 
 function App() {
@@ -10,8 +15,9 @@ function App() {
         renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/browser/:path" component={getBrowser}></Route>
+          <Route path="/browser/" component={getBrowser}></Route>
           <Route path="/">
-            <Browser />
+            <Redirect to="/browser/" />
           </Route>
         </Switch>
       </div>
@@ -24,7 +30,6 @@ function Home() {
 }
 
 function getBrowser(props) {
-  console.log(window.location.pathname);
   return <Browser path={window.location.pathname}></Browser>;
 }
 

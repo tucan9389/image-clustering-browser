@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Form, Pagination, Segment } from "semantic-ui-react";
+import { Grid, Pagination } from "semantic-ui-react";
 
 export default class PaginationExampleCustomization extends Component {
   state = {
@@ -28,8 +28,6 @@ export default class PaginationExampleCustomization extends Component {
   }
 
   updatePage(activePage, totalPages) {
-    console.log(activePage);
-    console.log(totalPages);
     this.setState({ activePage, totalPages });
   }
 
@@ -66,7 +64,6 @@ export default class PaginationExampleCustomization extends Component {
             size="mini"
             siblingRange={siblingRange}
             totalPages={totalPages}
-            // Heads up! All items are powered by shorthands, if you want to hide one of them, just pass `null` as value
             ellipsisItem={showEllipsis ? undefined : null}
             firstItem={showFirstAndLastNav ? undefined : null}
             lastItem={showFirstAndLastNav ? undefined : null}

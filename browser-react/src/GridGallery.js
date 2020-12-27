@@ -22,7 +22,7 @@ class GridGallery extends Component {
     if (!images) {
       images = [];
     }
-    console.log(images);
+    // console.log(images);
     this.setState({ images });
   }
 
