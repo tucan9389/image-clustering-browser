@@ -57,7 +57,7 @@ $ yarn install
 
 You can select one of the options:
 
-1. Download sample data from [image data](https://drive.google.com/drive/folders/1qY3i-JaR0txMU4UIuVJ65WKUCBQASEL6?usp=sharing) and [clustering data](https://drive.google.com/drive/folders/1gHwcpuV8bp8-6PeNlyY5yazGIgY0SU7w?usp=sharing)
+1. Download sample data from [image data](https://drive.google.com/drive/folders/1qY3i-JaR0txMU4UIuVJ65WKUCBQASEL6?usp=sharing) (19.31GB) and [clustering data](https://drive.google.com/drive/folders/1gHwcpuV8bp8-6PeNlyY5yazGIgY0SU7w?usp=sharing) (1.3MB)
 2. Make your own clustering with [CLUSTERING_GUIDE.md](CLUSTERING_GUIDE.md)
 
 
