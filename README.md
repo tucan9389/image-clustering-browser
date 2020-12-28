@@ -1,6 +1,6 @@
 # Image Clustering Browser
 
-You can cluster bunch of images with [faiss](https://github.com/facebookresearch/faiss) similarity and [k-means](https://en.wikipedia.org/wiki/K-means_clustering) clustering algorithm and browse the result on web with react client and flask server.
+You can browse clustered images on web. This repo also provides clustering with with [faiss](https://github.com/facebookresearch/faiss) similarity and [k-means](https://en.wikipedia.org/wiki/K-means_clustering) clustering algorithm.
 
 ## DEMO
 
@@ -20,7 +20,7 @@ You can cluster bunch of images with [faiss](https://github.com/facebookresearch
 - Others
   - [x] Without copying images, cluster million level images and write at txt files (faiss)
   - [ ] Make featuremaps with images
-  - [ ] Support to run and show the progress of the clustering with buttons on the web
+  - [ ] Run clustering with buttons and show the progress of the task on the web
   - [ ] Show the featuremaps for each image
   
 ## Diagram
@@ -111,7 +111,7 @@ $ cd ../browser-react
 $ yarn start
 ```
 
-And now you can browse the clustered images at [`http://localhost:3000/browser/`](`http://localhost:3000/browser/`).
+Now you can browse the clustered images at [`http://localhost:3000/browser/`](`http://localhost:3000/browser/`).
 
 ## Used Libraries
 
