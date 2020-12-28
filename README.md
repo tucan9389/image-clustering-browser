@@ -60,7 +60,6 @@ You can select one of the options:
 1. Download sample data from image data and clustering data
 2. Make your own clustering with [CLUSTERING_GUIDE.md](CLUSTERING_GUIDE.md)
 
-### 3. Run Browser API and Client Server
 
 <details>
 <summary>The clustering makes the directory structure. If you make cluster by yourself, you have to conform the structure.</summary>
@@ -96,6 +95,9 @@ You can select one of the options:
             └── img_names.txt
 ```
 </details>
+
+### 3. Run Browser API and Client Server
+
 
 And then, run the server and client app.
 
